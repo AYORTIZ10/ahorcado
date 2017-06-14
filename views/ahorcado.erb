@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ahorcado</title>
+</head>
+<body>
+<h1>Ahorcado</h1>
+<h2>Letras</h2>
+<h2><%= @mensajePositivo %></h2>
+<h2><%= @mensajeNegativo %></h2>
+<form action="/validarLetra" method="post">
+	<input type="text" name="letra" />
+	<br>
+	<br>
+	<input type="submit" value="enviar">
+</form>
+</body>
+</html>
