@@ -2,22 +2,17 @@
 class Ahorcado
 	def initialize 
 		@mensaje = 0
-		@palabra = "CASA"
+		
 		@existe = false
 		
 	end
 	def validaLetra letra
+		@palabra = "CASA"
 		@letraRecibida = letra
-		@palabra.each_char do |letra|
-			if letra == @letraRecibida
-				@existe = true
-			else 
-				@existe = false
-			end
-		end 
-		if @existe == true 
-				@mensaje = "RESULTADO +"
-			else
+		@existe = (@palabra.include? @letraRecibida)
+		if @existe
+			@mensaje = "RESULTADO +"
+		else
 			@mensaje = "RESULTADO -"
 		end
 	end
