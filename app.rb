@@ -3,6 +3,7 @@ require './config'
 require './lib/Ahorcado.rb'
 
 get '/' do
+	session["incognita"]="_ _ _ _"
 	erb :ahorcado
 end
 
@@ -14,6 +15,7 @@ post '/validarLetra' do
 		@mensajePositivo = "La letra #{@letra} si esta en la palabra"
 	elsif @mensaje == 'RESULTADO -'
 		@mensajeNegativo = "La letra #{@letra} no esta en la palabra"
-	end 
+	end
+	session["incognita"] ="_ A _ A"
 	erb :ahorcado
 end

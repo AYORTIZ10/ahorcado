@@ -13,3 +13,11 @@ Scenario: Seleccionar letras
 	Given Navego a la pagina
 	When Pongo letra "B"
 	Then Debo leer "La letra B no esta en la palabra"
+
+Scenario: Reemplazar Rayitas por letras
+	Given Navego a la pagina
+	When Pongo letra "A"
+	Then Debo ver "_ A _ A"
+
+
+

@@ -11,5 +11,14 @@ Then(/^Debo leer "([^"]*)"$/) do |texto|
    expect(page.body).to match /#{texto}/m
 end
 
+Then(/^Debo ver "([^"]*)"$/) do |caracteres|
+  expect(page.body).to match /#{caracteres}/m
+end
+
+When(/^Proceso letra "([^"]*)"$/) do |letraIngresada|
+  expect(page.body).to match /#{letraIngresada}/m
+end
+
+
 
 

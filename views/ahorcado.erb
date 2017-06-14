@@ -8,6 +8,9 @@
 <h2>Letras</h2>
 <h2><%= @mensajePositivo %></h2>
 <h2><%= @mensajeNegativo %></h2>
+<h2><%= session["incognita"] %></h2>
+	<br>
+	<br>
 <form action="/validarLetra" method="post">
 	<input type="text" name="letra" />
 	<br>
